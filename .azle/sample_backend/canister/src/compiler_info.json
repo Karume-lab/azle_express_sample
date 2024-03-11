@@ -1,1 +1,1 @@
-{"canister_methods":{"queries":[{"name":"getPerson","composite":false},{"name":"getPersons","composite":false}],"updates":[{"name":"addPerson"},{"name":"updatePerson"},{"name":"deletePerson"}],"callbacks":{}}}
+{"canister_methods":{"candid":"","queries":[],"updates":[],"callbacks":{}},"env_vars":[]}
