@@ -14,5 +14,8 @@
   "type": "module",
   "workspaces": [
     "src/sample_backend"
-  ]
+  ],
+  "dependencies": {
+    "azle": "^0.20.2"
+  }
 }

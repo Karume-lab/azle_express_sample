@@ -1,3 +1,7 @@
-service : {
-    "greet" : (text) -> (text) query;
+service: () -> {
+    addPerson: (record {name:text}) -> (record {id:text; name:text});
+    deletePerson: (text) -> (variant {Ok:record {id:text; name:text}; Err:variant {doesNotExist:text; serverError:text; unexpectedError:text; notFound:text}});
+    getPerson: (text) -> (variant {Ok:record {id:text; name:text}; Err:variant {doesNotExist:text; serverError:text; unexpectedError:text; notFound:text}}) query;
+    getPersons: () -> (vec record {id:text; name:text}) query;
+    updatePerson: (text, record {name:text}) -> (variant {Ok:record {id:text; name:text}; Err:variant {doesNotExist:text; serverError:text; unexpectedError:text; notFound:text}});
 }
