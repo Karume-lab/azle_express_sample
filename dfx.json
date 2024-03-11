@@ -4,17 +4,21 @@
       "build": "npx azle sample_backend",
       "candid": "src/sample_backend/sample_backend.did",
       "gzip": true,
-      "main": "src/sample_backend/src/index.ts",
+      "main": "src/sample_backend/index.ts",
       "type": "custom",
       "wasm": ".azle/sample_backend/sample_backend.wasm"
     },
+    "express": {
+      "build": "npx azle express",
+      "candid": "src/express/express.did",
+      "gzip": true,
+      "main": "src/express/index.ts",
+      "type": "custom",
+      "wasm": ".azle/express/express.wasm"
+    },
     "sample_frontend": {
-      "dependencies": [
-        "sample_backend"
-      ],
-      "source": [
-        "src/sample_frontend/assets"
-      ],
+      "dependencies": ["sample_backend"],
+      "source": ["src/sample_frontend/assets"],
       "type": "assets"
     }
   },
